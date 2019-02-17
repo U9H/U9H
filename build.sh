@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+
 zola_version="0.5.1"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
