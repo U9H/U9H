@@ -1,6 +1,0 @@
-[submodule "sites/front"]
-	path = sites/front
-	url =  "https://github.com/U9H/front" #git@github.com:U9H/U9H-front.git
-[submodule "sites/blog"]
-	path = sites/blog
-	url = "https://github.com/U9H/blog" #git@github.com:U9H/blog.git

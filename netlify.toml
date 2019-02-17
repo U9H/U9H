@@ -1,6 +1,0 @@
-[build]
-publish = "public"
-command = "./build.sh"
-
-[context.deploy-preview]
-command = "./build.sh"
