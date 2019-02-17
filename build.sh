@@ -3,7 +3,6 @@ zola_version="0.5.1"
 
 # download repo recursively 
 git clone --recurse-submodules -j8 https://github.com/U9H/U9H deploy
-cd deploy
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     zola_os="unknown-linux-gnu"
@@ -21,13 +20,15 @@ if [ ! -f zola ]; then
     curl -sL $zola_download | tar zxv 
 fi
 
+cd deploy
+
 # Build `front` into `/public/`
 cd sites/front
-../../zola build -o "../../public/"
+../../../zola build -o "../../../public/"
 
 # Build `blog` into `/public/blog/`
 cd ../blog
-../../zola build -o "../../public/blog/"
+../../../zola build -o "../../../public/blog/"
 
 # clean up
 rm -rf deploy
