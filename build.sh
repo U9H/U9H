@@ -16,7 +16,7 @@ fi
 if [ ! -f zola ]; then
    zola_download="https://github.com/getzola/zola/releases/download/v${zola_version}/zola-v${zola_version}-x86_64-${zola_os}.tar.gz"
     echo "Downloading: ${zola_download}"
-    curl -sL zola_download | tar zxv 
+    curl -sL $zola_download | tar zxv 
 fi
 
 # Build `front` into `/public/`
