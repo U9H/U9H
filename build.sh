@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+ssh-keygen -R github.com
 
 zola_version="0.5.1"
 
