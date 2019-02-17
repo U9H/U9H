@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
-
 zola_version="0.5.1"
+
+# download repo recursively 
+git clone --recurse-submodules -j8 https://github.com/U9H/U9H deploy
+cd deploy
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     zola_os="unknown-linux-gnu"
@@ -26,3 +28,6 @@ cd sites/front
 # Build `blog` into `/public/blog/`
 cd ../blog
 ../../zola build -o "../../public/blog/"
+
+# clean up
+rm -rf deploy
