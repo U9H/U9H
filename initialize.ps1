@@ -10,7 +10,7 @@ function Clone-Repos {
     New-Item $Directory -ItemType Directory -Force -ErrorAction SilentlyContinue
     Set-Location $Directory
     foreach ($Repo in $Repos) {
-        Invoke-Expression "git clone --recurse-submodules -j8 https://github.com/U9H/${Repo}"
+        Invoke-Expression "git clone --recurse-submodules -j8 git@github.com:U9H/${Repo}.git"
     }
     Set-Location "../"
 }
